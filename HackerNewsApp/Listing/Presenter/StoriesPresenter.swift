@@ -30,10 +30,17 @@ class StoriesPresenter: NSObject {
         self.storiesViewModel.fetchStoriesItems()
     }
     
-    public func getStory (index:Int) -> Story {
-        self.storiesItems[index]
+    public func fetchStoriesIds () {
+        self.storiesViewModel.fetchStorisIds()
     }
     
+    public func getStory (index:Int) -> Story {
+        return self.storiesItems[index]
+    }
+    
+    public func getStoriesIds () -> Stories {
+        return self.storiesIds
+    }
     
 }
 extension StoriesPresenter : StoriesListModelDelegate {
