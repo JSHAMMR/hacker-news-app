@@ -18,7 +18,31 @@ class StoriesModelDecoderTest: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+    func testStoryIdsDecoder() {
+        let storyJSON = [
+        22272966,
+        22272844,
+        22269115,
+        22263022]
+        
+        
+        do {
+            
+            
+            let jsonData = try JSONSerialization.data(withJSONObject: storyJSON, options: [])
+            let stories : Stories = try! Stories(data: jsonData)
+            
+            XCTAssertTrue(stories.count == 4, "Failed to return the expected count of stories")
+            XCTAssertEqual(stories.first,22272966 , "Failed to return the expected id of story")
+            XCTAssertEqual(stories.last,22263022 , "Failed to return the expected id of story")
+
+            
+        } catch let error {
+            print(error)
+        }
+
+    }
+
     func testStoryItemDecoder() {
         let storyJSON =
         ["by": "tel",
