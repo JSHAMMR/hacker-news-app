@@ -10,6 +10,8 @@ import UIKit
 
 protocol StoriesListModelDelegate : AnyObject {
     func didFetchStoriesItems(success:Bool, storiesItems:[Story])
+    func didFetchAllStoriesIds(success:Bool, storiesIds:Stories)
+
 }
 open class StoriesViewModel: NSObject {
        weak var delegate: StoriesListModelDelegate?
@@ -20,6 +22,24 @@ open class StoriesViewModel: NSObject {
        init(networkLayer:Network) {
            self.networkLayer = networkLayer
        }
+    
+    
+    // for testing 
+    open func fetchStorisIds (){
+        self.networkLayer.getTopStories { (stories) in
+            
+            if let delegate = self.delegate {
+                  delegate.didFetchAllStoriesIds(success: true, storiesIds: stories!)
+                  return
+              }
+            
+            if let delegate = self.delegate {
+                delegate.didFetchAllStoriesIds(success: false, storiesIds: stories!)
+                return
+            }
+        }
+       
+    }
     
     open func fetchStoriesItems() {
            
