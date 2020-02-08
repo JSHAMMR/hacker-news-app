@@ -15,7 +15,8 @@ class StoriesListMock: NSObject, StoriesPresenterDelegate {
     }
     
     func didFetchAllStoriesIds(success: Bool) {
-        
+        storiesIds = success
+
     }
     
 
@@ -34,7 +35,35 @@ class StoriesIntegrationTest: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    func testShowStoriesIds() {
+            let stories : Stories =
+                [22272966,
+                22272844,
+                22269115,
+                22263022,
+                22266173,
+                22272233,
+                22254719]
 
+            let networkLayer = NetworkLayerMock(mockedStoriesIds:stories)
+            let storiesViewModel = StoriesViewModel(networkLayer: networkLayer)
+            let storiesPresenter = StoriesPresenter(storiesViewModel: storiesViewModel)
+
+            let storiesListMock = StoriesListMock()
+
+            storiesPresenter.delegate = storiesListMock
+            storiesPresenter.fetchStoriesIds()
+
+            XCTAssertTrue(storiesListMock.storiesIds, "Success in fetching stories")
+
+            let firstStoryId = storiesPresenter.getStoriesIds().first
+            let lastStoryId = storiesPresenter.getStoriesIds().last
+
+            XCTAssertEqual(firstStoryId, 22272966, "failed to get first story Id")
+            XCTAssertEqual(lastStoryId, 22254719, "failed to get last story Id")
+
+
+       }
 
     func testShowStoryAttributes() {
         let story1 =
