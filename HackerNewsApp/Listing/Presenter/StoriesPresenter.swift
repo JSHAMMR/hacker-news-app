@@ -22,8 +22,8 @@ class StoriesPresenter: NSObject {
     weak var delegate: StoriesPresenterDelegate?
     private let storiesViewModel: StoriesViewModel!
     
-    fileprivate var storiesItems:[Story]!
-    fileprivate var storiesIds:Stories!
+    fileprivate var storiesItems:[Story] = [Story]()
+    fileprivate var storiesIds:Stories = [Int]()
 
     init(storiesViewModel:StoriesViewModel) {
         self.storiesViewModel = storiesViewModel
@@ -42,7 +42,9 @@ class StoriesPresenter: NSObject {
     public func getStory (index:Int) -> Story {
         return self.storiesItems[index]
     }
-    
+    public func getStoryCount () -> Int {
+        return self.storiesItems.count
+    }
     public func getStoriesIds () -> Stories {
         return self.storiesIds
     }
