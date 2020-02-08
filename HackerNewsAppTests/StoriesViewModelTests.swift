@@ -32,7 +32,34 @@ class StoriesViewModelTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-  
+    func testFetchingStoriesIdsFromNetworkLayer() {
+        let stories : Stories =
+            [22272966,
+            22272844,
+            22269115,
+            22263022,
+            22266173,
+            22272233,
+            22254719]
+        
+        let networkLayer = NetworkLayerMock(mockedStoriesIds:stories)
+        let storiesViewModel = StoriesViewModel(networkLayer: networkLayer)
+        let storiesViewModelDelegateMock = StoriesViewModelDelegateMock()
+        storiesViewModel.delegate = storiesViewModelDelegateMock
+        storiesViewModel.fetchStorisIds()
+        
+        XCTAssertTrue(storiesViewModelDelegateMock.storiesIds.count == 7, "Failed to return the expected count of stories")
+
+        let firstStoryId = storiesViewModelDelegateMock.storiesIds.first
+        let lastStoryId = storiesViewModelDelegateMock.storiesIds.last
+        
+        XCTAssertEqual(firstStoryId, 22272966, "failed to get first story Id")
+        XCTAssertEqual(lastStoryId, 22254719, "failed to get last story Id")
+
+        
+            
+
+    }
 
 
     func testFetchingStoriesFromNetworkLayer() {
@@ -77,6 +104,8 @@ class StoriesViewModelTests: XCTestCase {
         XCTAssertEqual(firstStory.descendants, 16, "failed to get first story descendants")
         XCTAssertEqual(secondStory.descendants, 178, "failed to get second story descendants")
         
+        XCTAssertEqual(firstStory.score, 25, "failed to get first story descendants")
+        XCTAssertEqual(secondStory.score, 234, "failed to get second story descendants")
         
         XCTAssertEqual(firstStory.kids, [121016,121109,121168], "failed to get first story childs")
         XCTAssertEqual(secondStory.kids, [22269967,22269989], "failed to get first story childs")
