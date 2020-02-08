@@ -26,7 +26,7 @@ open class StoriesViewModel: NSObject {
     
     // for testing 
     open func fetchStorisIds (){
-        self.networkLayer.getTopStories { (stories) in
+        self.networkLayer.getTopStoriesIds { (stories) in
             
             if let delegate = self.delegate {
                   delegate.didFetchAllStoriesIds(success: true, storiesIds: stories!)

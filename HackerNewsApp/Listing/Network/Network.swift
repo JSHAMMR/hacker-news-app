@@ -11,7 +11,7 @@ import UIKit
 open class Network: NSObject {
     
     // getting the ids of top stories as api schema has
-    open func getTopStories( completion:@escaping (Stories?) -> Void)  {
+    open func getTopStoriesIds( completion:@escaping (Stories?) -> Void)  {
 
         guard let getUrl = URL(string: hackerNewsAPIBaseUrL + topStoriesAction) else { return }
  
@@ -35,7 +35,7 @@ open class Network: NSObject {
         let dispatchGroup = DispatchGroup()// for asynchronous process
         var storiesDetailsList = [Story]()
 
-        getTopStories { (stories) in
+        getTopStoriesIds { (stories) in
                 // take only first 25 ids - reduce fetching items
                 let topStoriesIds = stories![0..<24]
 
