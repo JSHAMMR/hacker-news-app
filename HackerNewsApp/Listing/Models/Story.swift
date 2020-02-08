@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Story
-class Story: Codable {
+public class Story: Codable {
     var by: String?
     var descendants, id: Int?
     var kids: [Int]?
