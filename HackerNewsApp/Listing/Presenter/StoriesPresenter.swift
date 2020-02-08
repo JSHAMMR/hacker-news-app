@@ -30,6 +30,9 @@ class StoriesPresenter: NSObject {
         self.storiesViewModel.fetchStoriesItems()
     }
     
+    public func getStory (index:Int) -> Story {
+        self.storiesItems[index]
+    }
     
     
 }
