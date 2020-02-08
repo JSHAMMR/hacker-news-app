@@ -9,21 +9,15 @@
 import UIKit
 
 open class Network: NSObject {
-    func getTopStories(api:String, completion:@escaping (Data?) -> Void)  {
+    
+    // getting the ids of top stories as api schema has
+    func getTopStories( completion:@escaping (Data?) -> Void)  {
 
         guard let getUrl = URL(string: hackerNewsAPIBaseUrL + topStoriesAction) else { return }
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let dataTask = session.dataTask(with: getUrl) { (data, response, error) in
             guard let data = data else { return }
-            do {
-                if let returnData = String(data: data, encoding: .utf8) {
-                    print(returnData)
-                } else {
-                    print("empty")
-                }
-            }
-            
             if let err = error {
                 print("Err", err)
             }
@@ -34,8 +28,46 @@ open class Network: NSObject {
     }
     
     
-    
-    
+    // getting each story item attributes
+    open func getTopStoriesInDetails( completion:@escaping ([Story]?) -> Void) {
+        
+        let dispatchGroup = DispatchGroup()// for asynchronous process
+        var storiesDetailsList = [Story]()
+
+        getTopStories { (storiesData) in
+            do {
+                
+                let allTopStoriesIds = try Stories(data: storiesData!)
+                // take only first 25 ids
+                let topStoriesIds = allTopStoriesIds[0..<24]
+
+                
+                topStoriesIds.forEach { (storyID) in
+                    let storyUrl = URL(string:hackerNewsAPIBaseUrL+"item/"+"\(storyID)"+".json?print=pretty") // url request for each item
+                    dispatchGroup.enter() // starting the call
+                    URLSession.shared.dataTask(with: storyUrl!) { data, response, error in
+                        
+                         do {
+                             let story = try Story(data: data!)
+                            storiesDetailsList.append(story) //
+                               } catch let error {
+                                   print(error)
+                               }
+                         dispatchGroup.leave() // leave when the task is done
+                     }.resume()
+
+                }
+                
+                // complete the process
+                dispatchGroup.notify(queue: DispatchQueue.main) {
+                       completion(storiesDetailsList)
+                   }
+                
+            } catch let error {
+                print(error)
+            }
+        }
+    }
     
     
     
