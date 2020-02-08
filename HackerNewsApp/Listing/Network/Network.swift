@@ -37,7 +37,7 @@ open class Network: NSObject {
 
         getTopStoriesIds { (stories) in
                 // take only first 25 ids - reduce fetching items
-                let topStoriesIds = stories![0..<24]
+                let topStoriesIds = stories![0..<25]
 
                 
                 topStoriesIds.forEach { (storyID) in
