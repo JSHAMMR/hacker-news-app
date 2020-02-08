@@ -11,20 +11,21 @@ import UIKit
 open class Network: NSObject {
     
     // getting the ids of top stories as api schema has
-    func getTopStories( completion:@escaping (Data?) -> Void)  {
+    open func getTopStories( completion:@escaping (Stories?) -> Void)  {
 
         guard let getUrl = URL(string: hackerNewsAPIBaseUrL + topStoriesAction) else { return }
-        
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        let dataTask = session.dataTask(with: getUrl) { (data, response, error) in
-            guard let data = data else { return }
-            if let err = error {
-                print("Err", err)
-            }
+ 
+        URLSession.shared.dataTask(with: getUrl) { data, response, error in
+            var stories:Stories!
+                do {
+                    stories = try Stories(data: data!)
+                } catch let error {
+                    print(error)
+                }
             
-            completion(data)
-        }
-        dataTask.resume()
+            completion(stories)
+            
+            }.resume()
     }
     
     
@@ -34,26 +35,25 @@ open class Network: NSObject {
         let dispatchGroup = DispatchGroup()// for asynchronous process
         var storiesDetailsList = [Story]()
 
-        getTopStories { (storiesData) in
-            do {
-                
-                let allTopStoriesIds = try Stories(data: storiesData!)
-                // take only first 25 ids
-                let topStoriesIds = allTopStoriesIds[0..<24]
+        getTopStories { (stories) in
+                // take only first 25 ids - reduce fetching items
+                let topStoriesIds = stories![0..<24]
 
                 
                 topStoriesIds.forEach { (storyID) in
                     let storyUrl = URL(string:hackerNewsAPIBaseUrL+"item/"+"\(storyID)"+".json?print=pretty") // url request for each item
-                    dispatchGroup.enter() // starting the call
+                    dispatchGroup.enter() // starting the asynchronous process for one item
+                    print("requesting story id\(storyID) ....")
                     URLSession.shared.dataTask(with: storyUrl!) { data, response, error in
                         
-                         do {
-                             let story = try Story(data: data!)
+                        do {
+                            let story = try Story(data: data!)
                             storiesDetailsList.append(story) //
-                               } catch let error {
-                                   print(error)
-                               }
-                         dispatchGroup.leave() // leave when the task is done
+                        } catch let error {
+                            print(error)
+                        }
+                            print("requested story id\(storyID) ....")
+                            dispatchGroup.leave() // leave when the task is done
                      }.resume()
 
                 }
@@ -63,9 +63,7 @@ open class Network: NSObject {
                        completion(storiesDetailsList)
                    }
                 
-            } catch let error {
-                print(error)
-            }
+           
         }
     }
     
