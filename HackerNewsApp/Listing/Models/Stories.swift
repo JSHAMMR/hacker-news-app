@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Stories = [Int]
+public typealias Stories = [Int]
 
 extension Array where Element == Stories.Element {
     init(data: Data) throws {
