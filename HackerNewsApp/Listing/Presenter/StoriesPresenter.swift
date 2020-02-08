@@ -12,6 +12,11 @@ protocol StoriesPresenterDelegate : AnyObject {
     func didFetchStoriesItems(success:Bool)
     func didFetchAllStoriesIds(success:Bool)
 }
+extension StoriesPresenterDelegate {
+    func didFetchAllStoriesIds(success:Bool) {
+        
+    }
+}
 
 class StoriesPresenter: NSObject {
     weak var delegate: StoriesPresenterDelegate?
