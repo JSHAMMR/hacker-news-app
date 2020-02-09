@@ -13,6 +13,7 @@ class NetworkLayerMock: Network {
 
     private var mockedStories: [Story]!
     private var mockedStoiesIds: Stories!
+    private var mockedComments: [Comment]!
 
     
     init(mockedStories:[Story]) {
@@ -21,7 +22,9 @@ class NetworkLayerMock: Network {
     init(mockedStoriesIds:Stories) {
         self.mockedStoiesIds = mockedStoriesIds
     }
-    
+    init(mockedComments:[Comment]) {
+        self.mockedComments = mockedComments
+    }
     override func getTopStoriesInDetails(completion: @escaping ([Story]?) -> Void) {
         completion(self.mockedStories)
     }
@@ -29,5 +32,10 @@ class NetworkLayerMock: Network {
     override func getTopStoriesIds(completion: @escaping (Stories?) -> Void) {
         completion(self.mockedStoiesIds)
     }
+    
+    override func getComments(commentIds: [Int], completion: @escaping ([Comment]?) -> Void) {
+        completion(self.mockedComments)
+    }
+    
 
 }
