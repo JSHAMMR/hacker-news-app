@@ -40,6 +40,7 @@ class StoriesNetworkTest: XCTestCase {
         network.getTopStoriesInDetails { (stories) in
             
             XCTAssertNotNil(stories,"Failed to download stories details")
+            XCTAssertFalse(stories?.count == 0,"Stories count is zero")
 
             expectation.fulfill()
 
