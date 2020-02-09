@@ -8,7 +8,7 @@
 
 import UIKit
 protocol CommentListProviderProtocol {
-    func didSelectCell(story: Story)
+    func didSelectCell(comment: Comment)
 }
 class CommentListProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
     var commentListProviderProtocol: CommentListProviderProtocol?
@@ -22,11 +22,15 @@ class CommentListProvider: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as! CommentTableViewCell
+        let comment: Comment = commentPresenter.getComment(index: indexPath.row)
 
-        cell.comment = self.commentPresenter.getComment(index: indexPath.row)
+        cell.comment = comment
         
         return UITableViewCell()
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let comment: Comment = commentPresenter.getComment(index: indexPath.row)
+           commentListProviderProtocol?.didSelectCell(comment: comment)
+       }
 
 }
