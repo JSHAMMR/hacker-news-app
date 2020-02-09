@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC1D4C7823EECB9A00D42C7E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D4C7723EECB9A00D42C7E /* Date.swift */; };
 		DC1D4C7A23EF7FFA00D42C7E /* StoriesEndToEndTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D4C7923EF7FFA00D42C7E /* StoriesEndToEndTest.swift */; };
+		DC1D4C7D23EF9AE800D42C7E /* StoriesPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D4C7C23EF9AE800D42C7E /* StoriesPresenterTest.swift */; };
 		DC22634323EE528D006FF3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22634223EE528D006FF3D0 /* AppDelegate.swift */; };
 		DC22634723EE528D006FF3D0 /* StoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22634623EE528D006FF3D0 /* StoriesListViewController.swift */; };
 		DC22634A23EE528D006FF3D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC22634823EE528D006FF3D0 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		DC1D4C7723EECB9A00D42C7E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		DC1D4C7923EF7FFA00D42C7E /* StoriesEndToEndTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesEndToEndTest.swift; sourceTree = "<group>"; };
+		DC1D4C7C23EF9AE800D42C7E /* StoriesPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPresenterTest.swift; sourceTree = "<group>"; };
 		DC22633F23EE528D006FF3D0 /* HackerNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC22634223EE528D006FF3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC22634623EE528D006FF3D0 /* StoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC1D4C7B23EF99B000D42C7E /* Listing Test */ = {
+			isa = PBXGroup;
+			children = (
+				DC22638123EE7110006FF3D0 /* NetworkLayerMock.swift */,
+				DC1D4C7923EF7FFA00D42C7E /* StoriesEndToEndTest.swift */,
+				DC22638A23EE9D39006FF3D0 /* StoriesIntegrationTest.swift */,
+				DC22638523EE91FF006FF3D0 /* StoriesModelDecoderTest.swift */,
+				DC22638C23EEA805006FF3D0 /* StoriesNetworkTest.swift */,
+				DC1D4C7C23EF9AE800D42C7E /* StoriesPresenterTest.swift */,
+				DC22638323EE7346006FF3D0 /* StoriesViewModelTests.swift */,
+			);
+			path = "Listing Test";
+			sourceTree = "<group>";
+		};
+		DC1D4C7E23EF9E4600D42C7E /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		DC22633623EE528D006FF3D0 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +150,7 @@
 		DC22634123EE528D006FF3D0 /* HackerNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC1D4C7E23EF9E4600D42C7E /* Details */,
 				DC22637823EE5C47006FF3D0 /* Utils */,
 				DC22637223EE578F006FF3D0 /* Listing */,
 				DC22634223EE528D006FF3D0 /* AppDelegate.swift */,
@@ -141,12 +165,7 @@
 		DC22635823EE528E006FF3D0 /* HackerNewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				DC22638123EE7110006FF3D0 /* NetworkLayerMock.swift */,
-				DC22638323EE7346006FF3D0 /* StoriesViewModelTests.swift */,
-				DC22638523EE91FF006FF3D0 /* StoriesModelDecoderTest.swift */,
-				DC22638A23EE9D39006FF3D0 /* StoriesIntegrationTest.swift */,
-				DC22638C23EEA805006FF3D0 /* StoriesNetworkTest.swift */,
-				DC1D4C7923EF7FFA00D42C7E /* StoriesEndToEndTest.swift */,
+				DC1D4C7B23EF99B000D42C7E /* Listing Test */,
 				DC22635B23EE528E006FF3D0 /* Info.plist */,
 			);
 			path = HackerNewsAppTests;
@@ -384,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1D4C7D23EF9AE800D42C7E /* StoriesPresenterTest.swift in Sources */,
 				DC1D4C7A23EF7FFA00D42C7E /* StoriesEndToEndTest.swift in Sources */,
 				DC22638B23EE9D39006FF3D0 /* StoriesIntegrationTest.swift in Sources */,
 				DC22638D23EEA805006FF3D0 /* StoriesNetworkTest.swift in Sources */,
