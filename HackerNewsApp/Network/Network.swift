@@ -68,6 +68,36 @@ open class Network: NSObject {
     }
     
     
+    open func getComments(commentIds:[Int], completion:@escaping ([Comment]?) -> Void) {
+     
+        let dispatchGroup = DispatchGroup()// for asynchronous process
+        var commentList = [Comment]()
+
+        commentIds.forEach { (commentId) in
+            let commentUrl = URL(string:hackerNewsAPIBaseUrL+"item/"+"\(commentId)"+".json?print=pretty") // url request for each item
+            dispatchGroup.enter() // starting the asynchronous process for one item
+            print("requesting story id\(commentId) ....")
+            URLSession.shared.dataTask(with: commentUrl!) { data, response, error in
+
+            do {
+                let comment = try Comment(data: data!)
+                commentList.append(comment) //
+            } catch let error {
+                print(error)
+            }
+            print("requested story id\(commentId) ....")
+            dispatchGroup.leave() // leave when the task is done
+            }.resume()
+
+        }
+        // complete the process
+         dispatchGroup.notify(queue: DispatchQueue.main) {
+                completion(commentList)
+            }
+        
+        
+    }
+    
     
     
 }
