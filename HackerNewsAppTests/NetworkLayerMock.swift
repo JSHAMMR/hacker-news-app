@@ -11,19 +11,19 @@ import HackerNewsApp
 
 class NetworkLayerMock: Network {
 
-    private var mockedStoies: [Story]!
+    private var mockedStories: [Story]!
     private var mockedStoiesIds: Stories!
 
     
     init(mockedStories:[Story]) {
-        self.mockedStoies = mockedStories
+        self.mockedStories = mockedStories
     }
     init(mockedStoriesIds:Stories) {
         self.mockedStoiesIds = mockedStoriesIds
     }
     
     override func getTopStoriesInDetails(completion: @escaping ([Story]?) -> Void) {
-        completion(self.mockedStoies)
+        completion(self.mockedStories)
     }
     
     override func getTopStoriesIds(completion: @escaping (Stories?) -> Void) {
