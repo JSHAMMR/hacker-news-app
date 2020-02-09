@@ -39,6 +39,8 @@ class CommentPresenterTest: XCTestCase {
 
 
     // Asserting on stories values
+    
+    XCTAssertEqual(commentPresenter.getCommentCount(), 2, "Failed : wrong comment count")
     XCTAssertTrue(firstComment.by == "pg", "failed to get first comment auther")
     XCTAssertTrue(secondComment.by == "yters", "failed to get first comment auther")
 
