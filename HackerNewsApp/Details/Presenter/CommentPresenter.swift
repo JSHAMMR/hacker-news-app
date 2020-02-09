@@ -32,6 +32,9 @@ class CommentPresenter: NSObject {
         return self.commentItems.count
     }
     
+    public func getComment(index:Int) -> Comment {
+        return self.commentItems[index]
+    }
   
 }
 
