@@ -99,7 +99,7 @@ class StoriesIntegrationTest: XCTestCase {
         let secondStory = storiesPresenter.getStory(index: 1)
               
         
-        XCTAssertTrue(storiesListMock.storiesItems, "Success in fetching stories")
+        XCTAssertTrue(storiesListMock.storiesItems, "Failed in fetching stories")
         // Asserting on stories values
         XCTAssertTrue(firstStory.by == "tel", "failed to get first story auther")
         XCTAssertTrue(secondStory.by == "sev", "failed to get first story auther")
