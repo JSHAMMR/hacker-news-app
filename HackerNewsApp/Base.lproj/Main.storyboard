@@ -121,6 +121,21 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="h7j-hs-SR7">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="DiM-Cg-rJk" customClass="DetailViewController" customModule="HackerNewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2p6-DS-AP9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UfZ-SA-mhr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGW-Au-uN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="60"/>
+        </scene>
     </scenes>
     <resources>
         <image name="comment" width="256" height="256"/>
