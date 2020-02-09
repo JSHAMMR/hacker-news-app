@@ -21,8 +21,6 @@ class StoriesListViewController: UIViewController {
         self.storiesListProvider.storiesPresenter = self.storiesPresenter
         self.storiesTableView.delegate = self.storiesListProvider
         self.storiesTableView.dataSource = self.storiesListProvider
-
-        // Do any additional setup after loading the view.
     }
 
     func storiesListPresenter() -> StoriesPresenter {
