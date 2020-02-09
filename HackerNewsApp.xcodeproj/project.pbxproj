@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC1D4C7823EECB9A00D42C7E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D4C7723EECB9A00D42C7E /* Date.swift */; };
+		DC1D4C7A23EF7FFA00D42C7E /* StoriesEndToEndTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D4C7923EF7FFA00D42C7E /* StoriesEndToEndTest.swift */; };
 		DC22634323EE528D006FF3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22634223EE528D006FF3D0 /* AppDelegate.swift */; };
-		DC22634723EE528D006FF3D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22634623EE528D006FF3D0 /* ViewController.swift */; };
+		DC22634723EE528D006FF3D0 /* StoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22634623EE528D006FF3D0 /* StoriesListViewController.swift */; };
 		DC22634A23EE528D006FF3D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC22634823EE528D006FF3D0 /* Main.storyboard */; };
 		DC22634C23EE528E006FF3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC22634B23EE528E006FF3D0 /* Assets.xcassets */; };
 		DC22634F23EE528E006FF3D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC22634D23EE528E006FF3D0 /* LaunchScreen.storyboard */; };
-		DC22635A23EE528E006FF3D0 /* HackerNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22635923EE528E006FF3D0 /* HackerNewsAppTests.swift */; };
 		DC22636523EE528E006FF3D0 /* HackerNewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22636423EE528E006FF3D0 /* HackerNewsAppUITests.swift */; };
+		DC22637523EE57BD006FF3D0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22637423EE57BD006FF3D0 /* Stories.swift */; };
+		DC22637723EE5828006FF3D0 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22637623EE5828006FF3D0 /* Story.swift */; };
+		DC22637A23EE5C66006FF3D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22637923EE5C66006FF3D0 /* Constants.swift */; };
+		DC22637D23EE5D65006FF3D0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22637C23EE5D65006FF3D0 /* Network.swift */; };
+		DC22638023EE6DC9006FF3D0 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22637F23EE6DC9006FF3D0 /* StoriesViewModel.swift */; };
+		DC22638223EE7110006FF3D0 /* NetworkLayerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638123EE7110006FF3D0 /* NetworkLayerMock.swift */; };
+		DC22638423EE7346006FF3D0 /* StoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638323EE7346006FF3D0 /* StoriesViewModelTests.swift */; };
+		DC22638623EE91FF006FF3D0 /* StoriesModelDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638523EE91FF006FF3D0 /* StoriesModelDecoderTest.swift */; };
+		DC22638923EE9A1F006FF3D0 /* StoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638823EE9A1F006FF3D0 /* StoriesPresenter.swift */; };
+		DC22638B23EE9D39006FF3D0 /* StoriesIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638A23EE9D39006FF3D0 /* StoriesIntegrationTest.swift */; };
+		DC22638D23EEA805006FF3D0 /* StoriesNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638C23EEA805006FF3D0 /* StoriesNetworkTest.swift */; };
+		DC22639023EEBE4F006FF3D0 /* StoriesListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638F23EEBE4F006FF3D0 /* StoriesListProvider.swift */; };
+		DC22639323EEBF3B006FF3D0 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22639223EEBF3B006FF3D0 /* StoryTableViewCell.swift */; };
+		DC22639723EEC64C006FF3D0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22639623EEC64C006FF3D0 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +49,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC1D4C7723EECB9A00D42C7E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		DC1D4C7923EF7FFA00D42C7E /* StoriesEndToEndTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesEndToEndTest.swift; sourceTree = "<group>"; };
 		DC22633F23EE528D006FF3D0 /* HackerNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC22634223EE528D006FF3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC22634623EE528D006FF3D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC22634623EE528D006FF3D0 /* StoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListViewController.swift; sourceTree = "<group>"; };
 		DC22634923EE528D006FF3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC22634B23EE528E006FF3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC22634E23EE528E006FF3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC22635023EE528E006FF3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC22635523EE528E006FF3D0 /* HackerNewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC22635923EE528E006FF3D0 /* HackerNewsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsAppTests.swift; sourceTree = "<group>"; };
 		DC22635B23EE528E006FF3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC22636023EE528E006FF3D0 /* HackerNewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC22636423EE528E006FF3D0 /* HackerNewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsAppUITests.swift; sourceTree = "<group>"; };
 		DC22636623EE528E006FF3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC22637423EE57BD006FF3D0 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		DC22637623EE5828006FF3D0 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		DC22637923EE5C66006FF3D0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DC22637C23EE5D65006FF3D0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		DC22637F23EE6DC9006FF3D0 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
+		DC22638123EE7110006FF3D0 /* NetworkLayerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerMock.swift; sourceTree = "<group>"; };
+		DC22638323EE7346006FF3D0 /* StoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModelTests.swift; sourceTree = "<group>"; };
+		DC22638523EE91FF006FF3D0 /* StoriesModelDecoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesModelDecoderTest.swift; sourceTree = "<group>"; };
+		DC22638823EE9A1F006FF3D0 /* StoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPresenter.swift; sourceTree = "<group>"; };
+		DC22638A23EE9D39006FF3D0 /* StoriesIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesIntegrationTest.swift; sourceTree = "<group>"; };
+		DC22638C23EEA805006FF3D0 /* StoriesNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesNetworkTest.swift; sourceTree = "<group>"; };
+		DC22638F23EEBE4F006FF3D0 /* StoriesListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListProvider.swift; sourceTree = "<group>"; };
+		DC22639223EEBF3B006FF3D0 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		DC22639623EEC64C006FF3D0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +127,9 @@
 		DC22634123EE528D006FF3D0 /* HackerNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC22637823EE5C47006FF3D0 /* Utils */,
+				DC22637223EE578F006FF3D0 /* Listing */,
 				DC22634223EE528D006FF3D0 /* AppDelegate.swift */,
-				DC22634623EE528D006FF3D0 /* ViewController.swift */,
 				DC22634823EE528D006FF3D0 /* Main.storyboard */,
 				DC22634B23EE528E006FF3D0 /* Assets.xcassets */,
 				DC22634D23EE528E006FF3D0 /* LaunchScreen.storyboard */,
@@ -110,7 +141,12 @@
 		DC22635823EE528E006FF3D0 /* HackerNewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				DC22635923EE528E006FF3D0 /* HackerNewsAppTests.swift */,
+				DC22638123EE7110006FF3D0 /* NetworkLayerMock.swift */,
+				DC22638323EE7346006FF3D0 /* StoriesViewModelTests.swift */,
+				DC22638523EE91FF006FF3D0 /* StoriesModelDecoderTest.swift */,
+				DC22638A23EE9D39006FF3D0 /* StoriesIntegrationTest.swift */,
+				DC22638C23EEA805006FF3D0 /* StoriesNetworkTest.swift */,
+				DC1D4C7923EF7FFA00D42C7E /* StoriesEndToEndTest.swift */,
 				DC22635B23EE528E006FF3D0 /* Info.plist */,
 			);
 			path = HackerNewsAppTests;
@@ -123,6 +159,79 @@
 				DC22636623EE528E006FF3D0 /* Info.plist */,
 			);
 			path = HackerNewsAppUITests;
+			sourceTree = "<group>";
+		};
+		DC22637223EE578F006FF3D0 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				DC22639123EEBF0C006FF3D0 /* View */,
+				DC22638E23EEBE37006FF3D0 /* Provider */,
+				DC22638723EE999F006FF3D0 /* Presenter */,
+				DC22637E23EE6DA6006FF3D0 /* ViewModel */,
+				DC22637B23EE5D46006FF3D0 /* Network */,
+				DC22637323EE57A2006FF3D0 /* Models */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		DC22637323EE57A2006FF3D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC22637423EE57BD006FF3D0 /* Stories.swift */,
+				DC22637623EE5828006FF3D0 /* Story.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC22637823EE5C47006FF3D0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DC22637923EE5C66006FF3D0 /* Constants.swift */,
+				DC22639623EEC64C006FF3D0 /* UIView.swift */,
+				DC1D4C7723EECB9A00D42C7E /* Date.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DC22637B23EE5D46006FF3D0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC22637C23EE5D65006FF3D0 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DC22637E23EE6DA6006FF3D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC22637F23EE6DC9006FF3D0 /* StoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC22638723EE999F006FF3D0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DC22638823EE9A1F006FF3D0 /* StoriesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DC22638E23EEBE37006FF3D0 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				DC22638F23EEBE4F006FF3D0 /* StoriesListProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		DC22639123EEBF0C006FF3D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC22634623EE528D006FF3D0 /* StoriesListViewController.swift */,
+				DC22639223EEBF3B006FF3D0 /* StoryTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +365,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC22634723EE528D006FF3D0 /* ViewController.swift in Sources */,
+				DC22637A23EE5C66006FF3D0 /* Constants.swift in Sources */,
+				DC22639023EEBE4F006FF3D0 /* StoriesListProvider.swift in Sources */,
+				DC22639723EEC64C006FF3D0 /* UIView.swift in Sources */,
+				DC22637523EE57BD006FF3D0 /* Stories.swift in Sources */,
+				DC22638923EE9A1F006FF3D0 /* StoriesPresenter.swift in Sources */,
+				DC22637D23EE5D65006FF3D0 /* Network.swift in Sources */,
+				DC22638023EE6DC9006FF3D0 /* StoriesViewModel.swift in Sources */,
+				DC1D4C7823EECB9A00D42C7E /* Date.swift in Sources */,
+				DC22634723EE528D006FF3D0 /* StoriesListViewController.swift in Sources */,
 				DC22634323EE528D006FF3D0 /* AppDelegate.swift in Sources */,
+				DC22637723EE5828006FF3D0 /* Story.swift in Sources */,
+				DC22639323EEBF3B006FF3D0 /* StoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +384,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC22635A23EE528E006FF3D0 /* HackerNewsAppTests.swift in Sources */,
+				DC1D4C7A23EF7FFA00D42C7E /* StoriesEndToEndTest.swift in Sources */,
+				DC22638B23EE9D39006FF3D0 /* StoriesIntegrationTest.swift in Sources */,
+				DC22638D23EEA805006FF3D0 /* StoriesNetworkTest.swift in Sources */,
+				DC22638223EE7110006FF3D0 /* NetworkLayerMock.swift in Sources */,
+				DC22638423EE7346006FF3D0 /* StoriesViewModelTests.swift in Sources */,
+				DC22638623EE91FF006FF3D0 /* StoriesModelDecoderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
