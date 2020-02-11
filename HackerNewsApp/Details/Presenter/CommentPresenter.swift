@@ -14,10 +14,10 @@ protocol CommentPresenterDelegate : AnyObject {
 
 class CommentPresenter: NSObject {
     weak var delegate: CommentPresenterDelegate?
-    private let commentViewModel: CommentViewModel!
+    let commentViewModel: CommentViewModel!
     
-    fileprivate var commentItems:[Comment] = [Comment]()
-    
+    var commentItems:[Comment] = [Comment]()
+
     init(commentViewModel: CommentViewModel) {
         self.commentViewModel = commentViewModel
         super.init()
@@ -31,7 +31,6 @@ class CommentPresenter: NSObject {
     public func getCommentCount() -> Int {
         return self.commentItems.count
     }
-    
     public func getComment(index:Int) -> Comment {
         return self.commentItems[index]
     }
