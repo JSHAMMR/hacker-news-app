@@ -9,7 +9,10 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    @IBOutlet weak var commentTab: UIButton!
+    @IBOutlet weak var webTab: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

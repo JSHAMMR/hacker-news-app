@@ -128,13 +128,38 @@
                     <view key="view" contentMode="scaleToFill" id="2p6-DS-AP9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-mM-Wte">
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Yf0-tO-aek"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pOp-dh-gec"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-CH-rsF">
+                                <rect key="frame" x="0.0" y="73" width="207" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Comments"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K83-ov-Cgd">
+                                <rect key="frame" x="207" y="73" width="207" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Detail"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UfZ-SA-mhr"/>
                     </view>
+                    <connections>
+                        <outlet property="commentListProvider" destination="Q5I-yF-JDe" id="ocW-r4-P5a"/>
+                        <outlet property="commentTab" destination="vCA-CH-rsF" id="b4J-Il-Ycf"/>
+                        <outlet property="scrollView" destination="Znh-mM-Wte" id="A6u-Kh-cfi"/>
+                        <outlet property="webTab" destination="K83-ov-Cgd" id="BG6-rT-gnM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGW-Au-uN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Q5I-yF-JDe" customClass="CommentListProvider" customModule="HackerNewsApp" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="60"/>
+            <point key="canvasLocation" x="1911.594202898551" y="59.598214285714285"/>
         </scene>
     </scenes>
     <resources>
