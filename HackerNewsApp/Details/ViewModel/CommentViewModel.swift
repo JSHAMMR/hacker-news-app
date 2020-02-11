@@ -12,14 +12,14 @@ protocol CommentListModelDelegate : AnyObject {
 
 }
 class CommentViewModel: NSObject {
-    weak var delegate: CommentListModelDelegate?
+    weak var delegate: CommentListModelDelegate? // to feed presenter
 
     private let networkLayer: Network
-    init(networkLayer:Network) {
+    init(networkLayer:Network) { // connect network layer
         self.networkLayer = networkLayer
     }
     
-    open func fetchCommentItems(commentIds:[Int]) {
+    open func fetchCommentItems(commentIds:[Int]) { // fetching the comments delegate to update presenter status
            
         self.networkLayer.getComments(commentIds: commentIds) { (comments) in
             if let delegate = self.delegate {

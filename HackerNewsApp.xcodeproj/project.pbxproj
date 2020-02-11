@@ -160,11 +160,11 @@
 		DC1D4C7E23EF9E4600D42C7E /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				DC7A9A5E23EFC24C00C37B61 /* Views */,
-				DCE8837123EFB024003894CE /* Provider */,
-				DCE8836E23EFA88F003894CE /* Presenter */,
-				DCE8836B23EFA6E3003894CE /* ViewModel */,
 				DC1D4C7F23EF9EBA00D42C7E /* Models */,
+				DCE8836E23EFA88F003894CE /* Presenter */,
+				DCE8837123EFB024003894CE /* Provider */,
+				DCE8836B23EFA6E3003894CE /* ViewModel */,
+				DC7A9A5E23EFC24C00C37B61 /* Views */,
 			);
 			path = Details;
 			sourceTree = "<group>";

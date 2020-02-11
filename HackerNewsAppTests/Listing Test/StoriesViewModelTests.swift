@@ -32,6 +32,8 @@ class StoriesViewModelTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    //testing network->view model for storied ids
+
     func testFetchingStoriesIdsFromNetworkLayer() {
         let stories : Stories =
             [22272966,
@@ -60,7 +62,7 @@ class StoriesViewModelTests: XCTestCase {
             
 
     }
-
+    //testing network->view model for storied details
 
     func testFetchingStoriesFromNetworkLayer() {
         

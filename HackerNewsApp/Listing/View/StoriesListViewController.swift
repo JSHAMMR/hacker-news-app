@@ -14,16 +14,17 @@ class StoriesListViewController: UIViewController {
     var storiesPresenter:StoriesPresenter!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.storiesPresenter = self.storiesListPresenter()
-        self.storiesPresenter?.fetchStoriesItems()
+        self.storiesPresenter = self.storiesListPresenter() // instance
+        self.storiesPresenter?.fetchStoriesItems() // asking presenter to get the data
         self.storiesPresenter?.delegate = self
         
-        self.storiesListProvider.storiesPresenter = self.storiesPresenter
-        self.storiesListProvider.parentViewController = self
-        self.storiesTableView.delegate = self.storiesListProvider
+        self.storiesListProvider.storiesPresenter = self.storiesPresenter // to update stories list
+        self.storiesListProvider.parentViewController = self// to update ui
+        self.storiesTableView.delegate = self.storiesListProvider// provider for delegate and dataSource
         self.storiesTableView.dataSource = self.storiesListProvider
     }
 
+    //mapping presnter->viewmodel->network
     func storiesListPresenter() -> StoriesPresenter {
            let networkLayer = Network()
            let storiesViewModel = StoriesViewModel(networkLayer: networkLayer)

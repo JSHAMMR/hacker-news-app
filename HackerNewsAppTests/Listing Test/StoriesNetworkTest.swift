@@ -19,6 +19,7 @@ class StoriesNetworkTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    // testing real network call for testNetworkTopStoriesIds
 
     func testNetworkTopStoriesIds() {
         let network = Network()
@@ -33,7 +34,8 @@ class StoriesNetworkTest: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
        
     }
-    
+    // testing real network call for testNetworkTopStoriesItems
+
     func testNetworkTopStoriesItems() {
         let network = Network()
         let expectation = XCTestExpectation(description: "Download Up to 25 top and new stories")

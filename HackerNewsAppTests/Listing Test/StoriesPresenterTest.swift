@@ -20,7 +20,8 @@ class StoriesPresenterTest: XCTestCase {
     }
 
 
-    
+    // testing  network->view model-> presenter for stories
+
     func testLoadingStories(){
         let story1 =
             Story(by: "tel",

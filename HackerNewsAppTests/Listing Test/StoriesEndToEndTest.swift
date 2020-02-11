@@ -32,7 +32,8 @@ class StoriesEndToEndTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    
+    // testing  network->view model-> presenter-> Controller delegate-> uis for StoryAttributes
+
     func testStoriesEndToEnd() {
         let story1 =
                 Story(by: "tel",

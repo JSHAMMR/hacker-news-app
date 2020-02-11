@@ -19,6 +19,8 @@ class CommentsModelDecoderTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    
+    // testing decoder from mock json (Comment model)
     func testCommentItemDecoder() {
          let commentJSON =
          ["by": "pg",

@@ -11,10 +11,10 @@ protocol StoriesListProviderProtocol {
     func didSelectCell(story: Story)
 }
 class StoriesListProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
-    var storiesListProviderProtocol: StoriesListProviderProtocol?
+    var storiesListProviderProtocol: StoriesListProviderProtocol?// for cell testing
 
-    var storiesPresenter:StoriesPresenter!
-    var parentViewController:StoriesListViewController!
+    var storiesPresenter:StoriesPresenter! //to feed presenter
+    var parentViewController:StoriesListViewController!// parent for navigaiton call
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return storiesPresenter.getStoryCount()
@@ -34,12 +34,12 @@ class StoriesListProvider: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let story: Story = storiesPresenter.getStory(index: indexPath.row)
-        storiesListProviderProtocol?.didSelectCell(story: story)
+        storiesListProviderProtocol?.didSelectCell(story: story) // for testing
         
         let storyboard = UIStoryboard(name: StoryboardID.main, bundle: nil)
         
         
-        if parentViewController != nil {
+        if parentViewController != nil { // navigatoin to story details
             let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
                   detailViewController?.story = story
               parentViewController.navigationController?.pushViewController(detailViewController!, animated: true)

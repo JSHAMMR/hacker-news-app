@@ -9,6 +9,8 @@
 import XCTest
 import WebKit
 @testable import HackerNewsApp
+
+// moke provider for WKNavigationDelegate
 class WebMock:NSObject, WKNavigationDelegate{
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         expectation.fulfill()
@@ -31,23 +33,15 @@ class WebViewTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    
+    //
     func testWebView() {
         let webMock = WebMock()
-        expectation = XCTestExpectation(description: "loading webview")
-
+        expectation = XCTestExpectation(description: "loading webview") // wait 10 sec
         webMock.expectation = expectation
         self.webDetail.webView.load(URLRequest(url: URL(string: "https://blog.roboflow.ai/self-driving-car-dataset-missing-pedestrians/")!))
-        self.webDetail.webView.navigationDelegate = webMock
-
-        wait(for: [expectation], timeout: 10.0)
-
-        
-        
-        XCTAssertTrue(webMock.finish,"Falied to load webview")
-
-        
-        
+        self.webDetail.webView.navigationDelegate = webMock // listen to webview update
+        wait(for: [expectation], timeout: 10.0) // not more than 10 sec
+        XCTAssertTrue(webMock.finish,"Falied to load webview") 
     }
 
 }

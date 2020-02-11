@@ -16,7 +16,7 @@ class StoryTableViewCell: UITableViewCell {
     @IBOutlet var scoreLbl: UILabel!
     @IBOutlet var commentButton: UIButton!
 
-    var story:Story!{
+    var story:Story!{ // variable of story to set data
         didSet {
             titleLbl.text = story.title ?? ""
             subtitleLbl.text = "\(story.score ?? 0) Points by \(story.by ?? "") - \(story.kids?.count ?? 0) comments - \(Date().getElapsedInterval(unixTimestamp: story.time ?? 0))"

@@ -10,6 +10,8 @@ import Foundation
 
 extension Date {
 
+    
+    // filtering the date to determine between now and createddata
     func getElapsedInterval(unixTimestamp:Int) -> String {
         
     let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp))

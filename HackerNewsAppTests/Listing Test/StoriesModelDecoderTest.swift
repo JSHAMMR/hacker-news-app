@@ -18,6 +18,9 @@ class StoriesModelDecoderTest: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    // testing decoder from mock json (Stories model)
+
     func testStoryIdsDecoder() {
         let storyJSON = [
         22272966,
@@ -42,6 +45,8 @@ class StoriesModelDecoderTest: XCTestCase {
         }
 
     }
+    
+    // testing decoder from mock json (Story model)
 
     func testStoryItemDecoder() {
         let storyJSON =

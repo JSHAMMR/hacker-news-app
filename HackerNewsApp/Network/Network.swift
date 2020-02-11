@@ -67,7 +67,8 @@ open class Network: NSObject {
         }
     }
     
-    
+    // getting each story story attributes
+
     open func getComments(commentIds:[Int], completion:@escaping ([Comment]?) -> Void) {
      
         let dispatchGroup = DispatchGroup()// for asynchronous process

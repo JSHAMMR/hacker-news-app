@@ -35,6 +35,8 @@ class StoriesIntegrationTest: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    // testing  network->view model-> presenter-> Controller delegate for StoriesIds
+
     func testShowStoriesIds() {
             let stories : Stories =
                 [22272966,
@@ -64,6 +66,7 @@ class StoriesIntegrationTest: XCTestCase {
 
 
        }
+    // testing  network->view model-> presenter-> Controller delegate for StoryAttributes
 
     func testShowStoryAttributes() {
         let story1 =

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    func highlight (view:UIView , state: Bool) {
+    func highlight (view:UIView , state: Bool) { //  highlight selected view (bottomLine)
         let bottomLine = CALayer()
             bottomLine.frame = CGRect(x: 0.0, y: view.frame.height - 2, width: view.frame.width, height: 2.0)
         if state {

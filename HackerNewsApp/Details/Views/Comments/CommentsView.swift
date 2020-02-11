@@ -10,10 +10,10 @@ import UIKit
 
 class CommentsView: UIView {
 
-    
+    // comment table
     @IBOutlet weak var tableView: UITableView!
     
-    
+    // creating instance of view
     class func instanceFromNib() -> UIView {
          return UINib(nibName:"CommentsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
      }

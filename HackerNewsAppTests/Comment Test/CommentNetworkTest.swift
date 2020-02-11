@@ -19,7 +19,10 @@ class CommentNetworkTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testNetworkTopStoriesItems() {
+    
+
+    // testing real network call for testNetworkGetComment
+    func testNetworkGetComment() {
         let network = Network()
         let expectation = XCTestExpectation(description: "Download Up to 25 top and new stories")
 

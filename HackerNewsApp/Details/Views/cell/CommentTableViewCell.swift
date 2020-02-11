@@ -15,6 +15,7 @@ class CommentTableViewCell: UITableViewCell {
     @IBOutlet var textLbl: UILabel!
     @IBOutlet var container: UIView!
 
+    // setting values using comment var
     var comment:Comment! {
         didSet{
             autherLbl.text = "By \(comment.by ?? "")"

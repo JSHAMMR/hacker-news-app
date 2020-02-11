@@ -9,22 +9,22 @@
 import UIKit
 
 protocol StoriesListModelDelegate : AnyObject {
-    func didFetchStoriesItems(success:Bool, storiesItems:[Story])
-    func didFetchAllStoriesIds(success:Bool, storiesIds:Stories)
+    func didFetchStoriesItems(success:Bool, storiesItems:[Story]) // listen for stories update
+    func didFetchAllStoriesIds(success:Bool, storiesIds:Stories)// listen for ids update
 
 }
 open class StoriesViewModel: NSObject {
-       weak var delegate: StoriesListModelDelegate?
+       weak var delegate: StoriesListModelDelegate? // tp update presneter
     
     
-       private let networkLayer: Network
+       private let networkLayer: Network // network layer
 
        init(networkLayer:Network) {
            self.networkLayer = networkLayer
        }
     
     
-    // for testing 
+    // for testing only
     open func fetchStorisIds (){
         self.networkLayer.getTopStoriesIds { (stories) in
             
@@ -40,7 +40,7 @@ open class StoriesViewModel: NSObject {
         }
        
     }
-    
+    // getting the data from network layer and update presenter
     open func fetchStoriesItems() {
            
         

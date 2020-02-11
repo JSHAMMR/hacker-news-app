@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIScrollView {
+extension UIScrollView { // for scrollview pagination
 
     func scrollTo(horizontalPage: Int? = 0, verticalPage: Int? = 0, animated: Bool? = true) {
         var frame: CGRect = self.frame
@@ -21,7 +21,7 @@ extension UIScrollView {
 
 extension UIView {
     
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable var cornerRadius: CGFloat { // allow inspectable to change cornerRadius
         get {
             return layer.cornerRadius
         }
@@ -31,7 +31,7 @@ extension UIView {
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable var borderWidth: CGFloat {// allow inspectable to change borderWidth
         get {
             return layer.borderWidth
         }
@@ -40,7 +40,7 @@ extension UIView {
         }
     }
     
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable var borderColor: UIColor? {// allow inspectable to change borderColor
         get {
             return UIColor(cgColor: layer.borderColor!)
         }

@@ -10,7 +10,8 @@ import UIKit
 import WebKit
 class WebDetail: UIView {
     
-    
+    // webView to load story detail (url)
+
     @IBOutlet weak var webView: WKWebView!
     
     @IBOutlet weak var loader: UIActivityIndicatorView!
@@ -18,7 +19,8 @@ class WebDetail: UIView {
     override func draw(_ rect: CGRect) {
         self.loader.hidesWhenStopped = true
     }
-    
+    // creating instance of view
+
     class func instanceFromNib() -> UIView {
          return UINib(nibName:"WebDetail", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
      }
