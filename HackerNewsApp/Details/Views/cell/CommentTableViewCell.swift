@@ -17,7 +17,7 @@ class CommentTableViewCell: UITableViewCell {
 
     var comment:Comment! {
         didSet{
-            autherLbl.text = comment.by ?? ""
+            autherLbl.text = "By \(comment.by ?? "")"
             timeLbl.text = "\(Date().getElapsedInterval(unixTimestamp: comment.time ?? 0) )"
             textLbl.text = comment.text ?? ""
 
