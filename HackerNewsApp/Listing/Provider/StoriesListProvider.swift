@@ -38,10 +38,14 @@ class StoriesListProvider: NSObject, UITableViewDelegate, UITableViewDataSource 
         
         let storyboard = UIStoryboard(name: StoryboardID.main, bundle: nil)
         
-        let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
-        detailViewController?.story = story
-        parentViewController.navigationController?.pushViewController(detailViewController!, animated: true)
         
+        if parentViewController != nil {
+            let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+                  detailViewController?.story = story
+              parentViewController.navigationController?.pushViewController(detailViewController!, animated: true)
+                 
+        }
+       
         
     }
     
