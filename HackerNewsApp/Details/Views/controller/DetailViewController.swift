@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import WebKit
 class DetailViewController: UIViewController {
     @IBOutlet weak var commentTab: UIButton!
     @IBOutlet weak var webTab: UIButton!
@@ -33,7 +33,6 @@ class DetailViewController: UIViewController {
         self.addWebViewDetail()
 
         scrollView.contentSize = CGSize(width: self.webDetail.frame.size.width + self.commentsView.frame.size.width, height: self.view.frame.height )
-        
         
         /////
         // Do any additional setup after loading the view.
@@ -80,6 +79,7 @@ class DetailViewController: UIViewController {
         //load story url
         self.webDetail.webView.load(URLRequest(url:URL(string: self.story.url!)!))
 
+        self.webDetail.webView.navigationDelegate = self
     }
     
     func addCommentsView() {
@@ -105,9 +105,6 @@ extension DetailViewController:UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
     print(pageIndex)
-    
-    
-        
         switch pageIndex {
         case 0:
             self.highlight(view: self.commentTab, state: false)
@@ -121,5 +118,11 @@ extension DetailViewController:UIScrollViewDelegate{
             break
             
         }
+    }
+}
+
+extension DetailViewController:WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.webDetail.loader.stopAnimating()
     }
 }

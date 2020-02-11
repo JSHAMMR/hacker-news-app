@@ -13,7 +13,11 @@ class WebDetail: UIView {
     
     @IBOutlet weak var webView: WKWebView!
     
-    
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+
+    override func draw(_ rect: CGRect) {
+        self.loader.hidesWhenStopped = true
+    }
     
     class func instanceFromNib() -> UIView {
          return UINib(nibName:"WebDetail", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
