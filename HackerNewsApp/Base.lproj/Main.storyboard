@@ -136,7 +136,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="pOp-dh-gec"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-CH-rsF">
-                                <rect key="frame" x="0.0" y="90" width="207" height="40"/>
+                                <rect key="frame" x="207" y="90" width="207" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Comments"/>
                                 <connections>
@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K83-ov-Cgd">
-                                <rect key="frame" x="207" y="90" width="207" height="40"/>
+                                <rect key="frame" x="0.0" y="90" width="207" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Detail"/>
                                 <connections>

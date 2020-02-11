@@ -8,3 +8,6 @@
 public let hackerNewsAPIBaseUrL = "https://hacker-news.firebaseio.com/v0/"
 public let topStoriesAction = "topstories.json?print=pretty"
 
+enum StoryboardID {
+    static let main = "Main"
+}

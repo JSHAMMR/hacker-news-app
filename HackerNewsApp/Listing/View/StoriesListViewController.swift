@@ -19,6 +19,7 @@ class StoriesListViewController: UIViewController {
         self.storiesPresenter?.delegate = self
         
         self.storiesListProvider.storiesPresenter = self.storiesPresenter
+        self.storiesListProvider.parentViewController = self
         self.storiesTableView.delegate = self.storiesListProvider
         self.storiesTableView.dataSource = self.storiesListProvider
     }
