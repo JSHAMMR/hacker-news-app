@@ -30,7 +30,7 @@
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <viewLayoutGuide key="safeArea" id="pCf-3a-lap"/>
             <connections>
                 <outlet property="loader" destination="rWa-cm-dCk" id="1Hz-DN-QUe"/>
                 <outlet property="webView" destination="Ccj-kh-a7b" id="tMP-Q7-pKJ"/>

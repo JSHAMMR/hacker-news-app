@@ -17,8 +17,7 @@ class DetailViewController: UIViewController {
     fileprivate var commentsView:CommentsView!
     var commentPresenter:CommentPresenter!
     @IBOutlet var commentListProvider: CommentListProvider!
-       
-      
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +32,6 @@ class DetailViewController: UIViewController {
         self.addWebViewDetail()
 
         scrollView.contentSize = CGSize(width: self.webDetail.frame.size.width + self.commentsView.frame.size.width, height: self.view.frame.height )
-        
         /////
         // Do any additional setup after loading the view.
         self.commentPresenter = self.commentListPresenter()

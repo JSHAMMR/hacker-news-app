@@ -31,6 +31,7 @@
 		DC22639023EEBE4F006FF3D0 /* StoriesListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22638F23EEBE4F006FF3D0 /* StoriesListProvider.swift */; };
 		DC22639323EEBF3B006FF3D0 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22639223EEBF3B006FF3D0 /* StoryTableViewCell.swift */; };
 		DC22639723EEC64C006FF3D0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22639623EEC64C006FF3D0 /* UIView.swift */; };
+		DC2B249023F32CEC00E7E91C /* WebViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B248F23F32CEC00E7E91C /* WebViewTest.swift */; };
 		DC7A9A5D23EFBDD600C37B61 /* CommentPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A9A5C23EFBDD600C37B61 /* CommentPresenterTest.swift */; };
 		DC7A9A6023EFC27B00C37B61 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A9A5F23EFC27B00C37B61 /* CommentTableViewCell.swift */; };
 		DC7A9A6223EFC4D100C37B61 /* CommentIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A9A6123EFC4D100C37B61 /* CommentIntegrationTest.swift */; };
@@ -98,6 +99,7 @@
 		DC22638F23EEBE4F006FF3D0 /* StoriesListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListProvider.swift; sourceTree = "<group>"; };
 		DC22639223EEBF3B006FF3D0 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		DC22639623EEC64C006FF3D0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		DC2B248F23F32CEC00E7E91C /* WebViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewTest.swift; sourceTree = "<group>"; };
 		DC7A9A5C23EFBDD600C37B61 /* CommentPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPresenterTest.swift; sourceTree = "<group>"; };
 		DC7A9A5F23EFC27B00C37B61 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		DC7A9A6123EFC4D100C37B61 /* CommentIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentIntegrationTest.swift; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 		DCE8837623EFB1C7003894CE /* CommentNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkTest.swift; sourceTree = "<group>"; };
 		DCE8837823EFB426003894CE /* CommentsModelDecoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsModelDecoderTest.swift; sourceTree = "<group>"; };
 		DCE8837A23EFB7C7003894CE /* CommentViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModelTest.swift; sourceTree = "<group>"; };
-		DCEBE17023F3090F00AB5B2D /* WebDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetail.swift; sourceTree = "<group>"; };
+		DCEBE17023F3090F00AB5B2D /* WebDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetail.swift; sourceTree = "<group>"; usesTabs = 0; };
 		DCEBE17223F3093500AB5B2D /* WebDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebDetail.xib; sourceTree = "<group>"; };
 		DCEBE17723F30D8D00AB5B2D /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		DCEBE17923F30D9400AB5B2D /* CommentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsView.xib; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		DC22635823EE528E006FF3D0 /* HackerNewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DC2B248E23F32CA600E7E91C /* Webview Test */,
 				DCE8837423EFB141003894CE /* Helper */,
 				DCE8837523EFB168003894CE /* Comment Test */,
 				DC1D4C7B23EF99B000D42C7E /* Listing Test */,
@@ -302,6 +305,14 @@
 				DC22639223EEBF3B006FF3D0 /* StoryTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DC2B248E23F32CA600E7E91C /* Webview Test */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B248F23F32CEC00E7E91C /* WebViewTest.swift */,
+			);
+			path = "Webview Test";
 			sourceTree = "<group>";
 		};
 		DC7A9A5E23EFC24C00C37B61 /* Views */ = {
@@ -566,6 +577,7 @@
 				DC22638B23EE9D39006FF3D0 /* StoriesIntegrationTest.swift in Sources */,
 				DC22638D23EEA805006FF3D0 /* StoriesNetworkTest.swift in Sources */,
 				DC7A9A5D23EFBDD600C37B61 /* CommentPresenterTest.swift in Sources */,
+				DC2B249023F32CEC00E7E91C /* WebViewTest.swift in Sources */,
 				DC22638223EE7110006FF3D0 /* NetworkLayerMock.swift in Sources */,
 				DC22638423EE7346006FF3D0 /* StoriesViewModelTests.swift in Sources */,
 				DCE8837923EFB426003894CE /* CommentsModelDecoderTest.swift in Sources */,
