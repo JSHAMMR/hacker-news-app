@@ -17,7 +17,7 @@ class CommentListProvider: NSObject, UITableViewDelegate, UITableViewDataSource 
     var comments = [Comment]()
     let network = Network()
 
-    let colors : [UIColor] = [UIColor(named: "level1")!,UIColor(named: "level2")!,UIColor(named: "level3")!]
+    let colors : [UIColor] = [UIColor(named: "level1")!,UIColor(named: "level2")!,UIColor(named: "level3")!,UIColor(named: "level4")!,UIColor(named: "level5")!]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
 
@@ -29,10 +29,9 @@ class CommentListProvider: NSObject, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let comment: Comment = self.comments[indexPath.row]
 
-    {
              let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as! CommentTableViewCell
             cell.comment = comment
-        cell.backgroundColor = self.colors[self.checklevel(level: 0, comment: comment)]
+        cell.backgroundColor = self.colors[self.checklevel(level: 0, comment: comment) <= 4 ? self.checklevel(level: 0, comment: comment) : 0]
         
         print("level : \(self.checklevel(level: 0, comment: comment) * 20)")
 

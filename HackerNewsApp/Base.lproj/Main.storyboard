@@ -157,6 +157,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="commentListProvider" destination="Q5I-yF-JDe" id="BM4-Uf-tzS"/>
                         <outlet property="commentTab" destination="vCA-CH-rsF" id="b4J-Il-Ycf"/>
                         <outlet property="scrollView" destination="Znh-mM-Wte" id="A6u-Kh-cfi"/>
                         <outlet property="webTab" destination="K83-ov-Cgd" id="BG6-rT-gnM"/>
