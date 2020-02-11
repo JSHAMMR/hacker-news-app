@@ -13,6 +13,7 @@ class CommentTableViewCell: UITableViewCell {
     @IBOutlet var autherLbl: UILabel!
     @IBOutlet var timeLbl: UILabel!
     @IBOutlet var textLbl: UILabel!
+    @IBOutlet var container: UIView!
 
     var comment:Comment! {
         didSet{
