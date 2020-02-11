@@ -25,7 +25,7 @@ class StoriesNetworkTest: XCTestCase {
         let expectation = XCTestExpectation(description: "Download Up to 500 top and new stories")
         network.getTopStoriesIds { (stories) in
             XCTAssertNotNil(stories,"Failed to download stories")
-            XCTAssertTrue(stories?.count == 500,"Failed to download 500 stories")
+            //XCTAssertTrue(stories?.count == 500,"Failed to download 500 stories")
             
             expectation.fulfill()
 

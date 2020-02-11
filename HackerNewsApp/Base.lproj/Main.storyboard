@@ -130,27 +130,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-mM-Wte">
-                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="758"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Yf0-tO-aek"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="pOp-dh-gec"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-CH-rsF">
-                                <rect key="frame" x="0.0" y="73" width="207" height="40"/>
+                                <rect key="frame" x="0.0" y="90" width="207" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Comments"/>
+                                <connections>
+                                    <action selector="comments:" destination="DiM-Cg-rJk" eventType="touchUpInside" id="aJ0-h0-NM7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K83-ov-Cgd">
-                                <rect key="frame" x="207" y="73" width="207" height="40"/>
+                                <rect key="frame" x="207" y="90" width="207" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Detail"/>
+                                <connections>
+                                    <action selector="details:" destination="DiM-Cg-rJk" eventType="touchUpInside" id="p2w-6A-9YI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UfZ-SA-mhr"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="commentListProvider" destination="Q5I-yF-JDe" id="ocW-r4-P5a"/>
                         <outlet property="commentTab" destination="vCA-CH-rsF" id="b4J-Il-Ycf"/>
                         <outlet property="scrollView" destination="Znh-mM-Wte" id="A6u-Kh-cfi"/>
                         <outlet property="webTab" destination="K83-ov-Cgd" id="BG6-rT-gnM"/>
