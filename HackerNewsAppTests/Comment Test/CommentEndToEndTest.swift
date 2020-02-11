@@ -57,6 +57,7 @@ class CommentEndToEndTest: XCTestCase {
         tableView.dataSource = commentProvider
         tableView.delegate = commentProvider
         commentProvider.commentListProviderProtocol = commentEndToEndTestDelegate
+        commentProvider.comments = commentPresenter.commentItems
 
 
         XCTAssertEqual(commentProvider.tableView(tableView, numberOfRowsInSection: 1), 2,"Number of comments rows not correct")

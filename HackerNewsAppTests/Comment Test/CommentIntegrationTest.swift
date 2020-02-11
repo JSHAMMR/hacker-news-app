@@ -14,7 +14,6 @@ class CommentListMock: NSObject, CommentPresenterDelegate {
         commentItems = success
     }
     
-
     var commentItems = false
 
 }
