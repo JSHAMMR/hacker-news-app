@@ -259,8 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				DC22637923EE5C66006FF3D0 /* Constants.swift */,
-				DC22639623EEC64C006FF3D0 /* UIView.swift */,
 				DC1D4C7723EECB9A00D42C7E /* Date.swift */,
+				DC22639623EEC64C006FF3D0 /* UIView.swift */,
 				DCEBE17B23F3127500AB5B2D /* UIViewController.swift */,
 			);
 			path = Utils;
@@ -361,12 +361,12 @@
 		DCE8837523EFB168003894CE /* Comment Test */ = {
 			isa = PBXGroup;
 			children = (
+				DC7A9A6323EFC7F300C37B61 /* CommentEndToEndTest.swift */,
+				DC7A9A6123EFC4D100C37B61 /* CommentIntegrationTest.swift */,
 				DCE8837623EFB1C7003894CE /* CommentNetworkTest.swift */,
+				DC7A9A5C23EFBDD600C37B61 /* CommentPresenterTest.swift */,
 				DCE8837823EFB426003894CE /* CommentsModelDecoderTest.swift */,
 				DCE8837A23EFB7C7003894CE /* CommentViewModelTest.swift */,
-				DC7A9A5C23EFBDD600C37B61 /* CommentPresenterTest.swift */,
-				DC7A9A6123EFC4D100C37B61 /* CommentIntegrationTest.swift */,
-				DC7A9A6323EFC7F300C37B61 /* CommentEndToEndTest.swift */,
 			);
 			path = "Comment Test";
 			sourceTree = "<group>";
