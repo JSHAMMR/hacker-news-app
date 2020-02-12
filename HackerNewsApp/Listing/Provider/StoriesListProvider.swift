@@ -39,7 +39,7 @@ class StoriesListProvider: NSObject, UITableViewDelegate, UITableViewDataSource 
         let storyboard = UIStoryboard(name: StoryboardID.main, bundle: nil)
         
         
-        if parentViewController != nil { // navigatoin to story details
+        if parentViewController != nil && story.kids != nil { // navigatoin to story details
             let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
                   detailViewController?.story = story
               parentViewController.navigationController?.pushViewController(detailViewController!, animated: true)
