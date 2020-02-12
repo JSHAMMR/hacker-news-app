@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
         self.addCommentsView() // adding first tab which is comments
         self.addWebViewDetail() // adding second tab which is webview details
 
-        scrollView.contentSize = CGSize(width: self.webDetail.frame.size.width + self.commentsView.frame.size.width, height: self.view.frame.height )
+        scrollView.contentSize = CGSize(width: self.webDetail.frame.size.width + UIScreen.main.bounds.width, height: self.view.frame.height )
         /////
         // Do any additional setup after loading the view.
         self.commentPresenter = self.commentListPresenter() // presenter instance
@@ -75,7 +75,7 @@ class DetailViewController: UIViewController {
     //adding first tab to scrollview  (details)
     func addWebViewDetail() {
         self.webDetail = (WebDetail.instanceFromNib() as! WebDetail)
-        self.webDetail.frame =  CGRect(x: 0, y:0, width:  self.webDetail.frame.width, height: self.webDetail.frame.height)
+        self.webDetail.frame =  CGRect(x: 0, y:0, width:  UIScreen.main.bounds.width, height: self.webDetail.frame.height)
         scrollView.addSubview(self.webDetail)
         self.view.addSubview(self.scrollView)
         //load story url
@@ -87,7 +87,7 @@ class DetailViewController: UIViewController {
 
     func addCommentsView() {
         self.commentsView = (CommentsView.instanceFromNib() as! CommentsView)
-        self.commentsView.frame =  CGRect(x: self.view.frame.width, y:0, width:  self.commentsView.frame.width, height: self.commentsView.frame.height)
+        self.commentsView.frame =  CGRect(x: UIScreen.main.bounds.width, y:0, width:  UIScreen.main.bounds.width, height: self.commentsView.frame.height)
         scrollView.addSubview(self.commentsView)
         self.view.addSubview(self.scrollView)
 
