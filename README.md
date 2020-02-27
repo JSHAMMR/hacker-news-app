@@ -1,6 +1,6 @@
 # Hacker News App
 
-
+[![Build Status](https://travis-ci.com/JSHAMMR/hacker-news-app.svg?branch=master)](https://travis-ci.com/JSHAMMR/hacker-news-app)
 
 
 
