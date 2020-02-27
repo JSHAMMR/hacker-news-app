@@ -40,7 +40,7 @@ class WebViewTest: XCTestCase {
         webMock.expectation = expectation
         self.webDetail.webView.load(URLRequest(url: URL(string: "https://blog.roboflow.ai/self-driving-car-dataset-missing-pedestrians/")!))
         self.webDetail.webView.navigationDelegate = webMock // listen to webview update
-        wait(for: [expectation], timeout: 10.0) // not more than 10 sec
+        wait(for: [expectation], timeout: 20.0) // not more than 10 sec
         XCTAssertTrue(webMock.finish,"Falied to load webview") 
     }
 
